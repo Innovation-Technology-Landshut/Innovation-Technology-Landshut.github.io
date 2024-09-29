@@ -1,0 +1,33 @@
+                <form class="mitglied_werden_form" action="/my-handling-form-page" method="post">
+                    <ul class="mitglied_werden_ul">
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="name">Name:</label>
+                            <input class="mitglied_werden_input" type="text" id="name" name="user_name" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="name">Vorname:</label>
+                            <input class="mitglied_werden_input" type="text" id="vorname" name="user_vorname" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="name">Strasse:</label>
+                            <input class="mitglied_werden_input" type="text" id="strasse" name="strasse" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="name">Plz:</label>
+                            <input class="mitglied_werden_input" type="text" id="plz" name="plz" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="name">Stadt:</label>
+                            <input class="mitglied_werden_input" type="text" id="stadt" name="stadt" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                            <label class="mitglied_werden_label" for="mail">Email:</label>
+                            <input class="mitglied_werden_input" type="email" id="mail" name="user_email" />
+                        </li>
+                        <li class="mitglied_werden__li_li">
+                        <button class="mitglied_werden_btn" type="submit">
+                            <a href="./">abschicken</a>
+                        </button>
+                        </li>
+                    </ul>
+                  </form>

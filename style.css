@@ -1,0 +1,884 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 125px;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    transition: 0.3s;
+    color: #e66969;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: #ffcc00;
+    color: #000;
+}
+
+.button:hover {
+    transition: all 0.3s ease;
+    background: #e66969;
+}
+
+
+/* Mobile Version */
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 25vh;
+        font-size: 1.2rem;
+    }
+
+    .navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle {
+        cursor: pointer;
+        padding-top: 10px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #000;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: tanslate(-5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+        font-weight: 500;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Startseite Section */
+
+.main {
+    background-color: rgba(164, 226, 255, 1);
+    font-size: 1.5rem;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    min-height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.main__content h2 {
+    padding-top: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.main__btn {
+    font-size: 1.2rem;
+    background: #ffcc00;
+    color: #000;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e66969;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover::after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Startseite mobile Version */
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4 rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .main__btn {
+        font-size: 1.2rem;
+        background: #ffcc00;
+        color: #000;
+        width: 90%;
+        max-width: 400px;
+        padding: 20px 0px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.35s;
+        outline: none;
+    }
+}
+
+
+/* Über Uns Section */
+.überuns {
+    background-color: #ffd52f;
+    font-size: 1rem;
+}
+
+.überuns.right {
+    background-color: #a4e2ff;
+}
+
+.überuns.bottom {
+    background-color: #a4e2ff;
+}
+
+.überuns__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 50px;
+}
+
+.überuns__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    padding: 4rem 0;
+    min-height: 60vh;
+    max-width: 1300px;
+}
+
+.überuns__content.left {
+    flex-direction: row;
+}
+
+
+.überuns__content.right {
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    padding: 4rem 50px;
+}
+
+.überuns__text--container {
+    flex: 1;
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+}
+
+.überuns__text.bottom {
+    font-size: 1.4rem;
+}
+
+.überuns__img--container {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.überuns__img--container img {
+    max-width: 65%;
+    height: auto;
+}
+
+.überuns__content h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.überuns__btn {
+    font-size: 1.4rem;
+    background: #ffcc00;
+    color: #000;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 4rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.überuns__btn a {
+    position: relative;
+    z-index: 2;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.überuns__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e66969;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.überuns__btn:hover::after {
+    width: 100%;
+}
+
+/* Über Uns mobile Version */
+@media screen and (max-width: 1024px) {
+    .überuns__content h1 {
+        font-size: 2rem;
+        /* Etwas kleinere Überschrift für mittelgroße Bildschirme */
+    }
+
+    .überuns__img--container img {
+        max-width: 90%;
+        /* Bilder etwas größer bei mittelgroßen Bildschirmen */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .überuns__container {
+        padding: 2rem 10px;
+    }
+
+    .überuns_content {
+        flex-direction: column;
+    }
+
+    .überuns__content.left {
+        flex-direction: column;
+    }
+
+    .überuns__content.right {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .überuns__img--container {
+        margin-top: 20px;
+    }
+
+    .überuns__text--container {
+        font-size: 1.1rem;
+        /* Kleinere Textgröße auf mobilen Geräten */
+    }
+
+    .überuns__text {
+        font-size: 1.2rem;
+    }
+
+    .überuns__text.bottom {
+        font-size: 1.2rem;
+    }
+
+    .überuns__content h1 {
+        font-size: 1.8rem;
+        /* Kleinere Überschrift auf mobilen Geräten */
+    }
+
+    .überuns__img--container img {
+
+        max-width: 70%;
+        /* Bilder in voller Breite bei mobilen Geräten */
+    }
+
+    .überuns__btn {
+        display: block;
+        font-size: 1.2rem;
+        background: #ffcc00;
+        color: #000;
+        width: 100%;
+        max-width: 400px;
+        padding: 20px 0px;
+        border: none;
+        border-radius: 8px;
+        margin: 4rem auto 2rem auto;
+        /* Center the button */
+        cursor: pointer;
+        position: relative;
+        transition: all 0.35s;
+        outline: none;
+    }
+}
+
+/* Über Uns animation */
+.überuns__hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+}
+
+.überuns__visible {
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+/* Mitglied werden Section */
+.mitglied_werden {
+    background-color: #e66969;
+    font-size: 1rem;
+}
+
+.mitglied_werden__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    z-index: 1;
+    min-height: 80vh;
+    /* Ensure the height can't be less than 80vh */
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.mitglied_werden__content {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    margin: 6rem 0;
+}
+
+.mitglied_werden__content h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mitglied_werden__btn {
+    font-size: 1.4rem;
+    background: #ffcc00;
+    color: #000;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    text-align: center;
+}
+
+.mitglied_werden__btn a {
+    position: relative;
+    z-index: 2;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mitglied_werden__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fffc00;
+    transition: all 0.35s;
+    border-radius: 8px;
+}
+
+.mitglied_werden__btn:hover::after {
+    width: 100%;
+}
+
+.mitglied_werden__img--container {
+    text-align: center;
+}
+
+.mitglied_werden__img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Mitlgiedsbeiträge Section */
+.mitgliedsbeiträge {
+    background-color: #BE5555;
+    font-size: 1rem;
+}
+
+.mitgliedsbeiträge__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 6rem;
+}
+
+.mitgliedsbeiträge__content {
+    color: #000;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    margin-bottom: 6rem;
+}
+
+.mitgliedsbeiträge__content h3 {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+}
+
+.mitgliedsbeiträge__content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.mitgliedsbeiträge__table {
+    margin-top: 1rem;
+    border-collapse: separate;
+    border-spacing: 5rem 0;
+}
+
+.mitgliedsbeiträge__table th {
+    padding: 1rem 0;
+}
+
+/* .mitglied_werden_form {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.mitglied_werden_ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mitglied_werden__li_li {
+    margin-top: 1em;
+} */
+
+/* .mitglied_werden_label {
+    display: inline-block;
+    min-width: 90px;
+  } */
+
+/* .mitglied_werden_input,
+.mitglied_werden_textarea {
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 4px;
+} */
+
+@media screen and (max-width: 768px) {
+    .mitglied_werden__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 10px;
+    }
+
+    .mitglied_werden__img--container {
+        margin-bottom: 3rem;
+    }
+
+    .mitglied_werden__content {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .mitglied_werden__content h1 {
+        font-size: 1.9rem;
+        margin-top: 2rem;
+    }
+
+    .mitglied_werden__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .mitglied_werden__btn {
+        font-size: 1.2rem;
+        background: #ffcc00;
+        color: #000;
+        width: 90%;
+        max-width: 400px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.35s;
+        outline: none;
+    }
+
+    /* Mitgliedsbeiträge mobile section */
+    .mitgliedsbeiträge__container {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 15px;
+    }
+
+    .mitgliedsbeiträge__content {
+        font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+
+    .mitgliedsbeiträge__table {
+        margin-top: 1rem;
+        border-collapse: inherit;
+        border-spacing: 2.5rem 0;
+    }
+
+
+}
+
+/* Instagram Section */
+
+.instagram {
+    background-color: #e66969;
+    font-size: 1.5rem;
+}
+
+.instagram__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 0 50px;
+}
+
+
+/* Impressum Section */
+.impressum {
+    background-color: #2b2987;
+}
+
+.impressum__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 50px;
+    padding-bottom: 4rem;
+}
+
+.impressum__content {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.impressum__content h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .impressum__container {
+        padding: 3rem 20px;
+        font-size: 1rem;
+    }
+
+}
+
+/* Footer Section */
+
+.footer__container {
+    background: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+
+.footer__link-items>h2 {
+    color: #000;
+}
+
+.footer__link--items a {
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #e66969;
+    transition: 0.3s;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.footer__text a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__container {
+        font-size: 0.9rem;
+        padding: 1rem 0.2rem;
+    }
+
+    .footer__text {
+        white-space: unset;
+    }
+}
