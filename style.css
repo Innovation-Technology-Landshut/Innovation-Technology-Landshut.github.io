@@ -142,7 +142,7 @@ a:active {
         top: 100%;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 25vh;
+        height: 40vh;
         font-size: 1.2rem;
     }
 
@@ -178,7 +178,7 @@ a:active {
 
     .navbar__links {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
         width: 100%;
         display: table;
     }
@@ -860,7 +860,7 @@ td:first-child {
       justify-self: center;
       margin: 0 auto;
       z-index: 1;
-      min-height: 70vh;
+      min-height: 90vh;
       width: 100%;
       max-width: 1300px;
       padding: 0 50px;
@@ -870,14 +870,12 @@ td:first-child {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 300;
-    margin: 6rem 0;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
   
   .spendenseite__content h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    margin-top: 2rem;
     margin-bottom: 2rem;
   }
   
@@ -888,6 +886,7 @@ td:first-child {
   
   .spendenseite__img--container {
     text-align: center;
+    margin: 0 2rem
   }
   
   .spendenseite__img {
@@ -941,7 +940,6 @@ td:first-child {
   
     .spendenseite__content h1 {
       font-size: 1.9rem;
-      margin-top: 2rem;
     }
   
     .spendenseite__content p {
@@ -963,13 +961,12 @@ td:first-child {
       transition: all 0.35s;
       outline: none;
     }
-  
+
     .spendenseite__img--container {
-      margin-bottom: 3rem;
+      margin: 3rem;
     }
-  
     .spendenseite__img--container img {
-      max-width: 70%;
+      max-width: 100%;
     }
   }
 
