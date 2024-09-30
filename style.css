@@ -7,7 +7,7 @@
 
 /* Navbar */
 .navbar {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -17,6 +17,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 .navbar__container {
@@ -56,7 +57,7 @@
 
 .navbar__links:hover {
     transition: 0.3s;
-    color: #e66969;
+    color: #ffb300;
 }
 
 .navbar__btn {
@@ -83,7 +84,7 @@
 
 .button:hover {
     transition: all 0.3s ease;
-    background: #e66969;
+    background: #ffdd00;
 }
 
 
@@ -113,13 +114,18 @@
     }
 
     .navbar__menu.active {
-        background: #fff;
-        top: 100%;
+        background: rgba(255, 255, 255, 1);
         opacity: 1;
+        top: 100%;
         transition: all 0.5s ease;
         z-index: 99;
         height: 25vh;
         font-size: 1.2rem;
+    }
+
+    .blur {
+        filter: blur(10px);
+        transition: all 0.7s ease;
     }
 
     .navbar__logo {
@@ -192,7 +198,7 @@
 /* Startseite Section */
 
 .main {
-    background-color: rgba(164, 226, 255, 1);
+    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
     font-size: 1.5rem;
 }
 
@@ -242,21 +248,23 @@
     font-weight: 600;
     text-decoration: none;
 }
-
-.main__btn::after {
+/* Effekt: auffüllen */
+/* .main__btn::after {
     position: absolute;
     content: '';
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #e66969;
+    background: #ffdd00;
     transition: all 0.35s;
     border-radius: 4px;
-}
+} */
 
-.main__btn:hover::after {
-    width: 100%;
+.main__btn:hover {
+    transition: all 0.3s ease;
+    /* width: 100%; */
+    background: #ffdd00;
 }
 
 .main__img--container {
@@ -323,16 +331,16 @@
 
 /* Über Uns Section */
 .überuns {
-    background-color: #ffd52f;
+    background: linear-gradient(to bottom, #ffd52f 70%, #ecb81b);
     font-size: 1rem;
 }
 
 .überuns.right {
-    background-color: #a4e2ff;
+    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
 }
 
 .überuns.bottom {
-    background-color: #a4e2ff;
+    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
 }
 
 .überuns__container {
@@ -417,7 +425,7 @@
     text-decoration: none;
 }
 
-.überuns__btn::after {
+/* .überuns__btn::after {
     position: absolute;
     content: '';
     top: 0;
@@ -427,25 +435,15 @@
     background: #e66969;
     transition: all 0.35s;
     border-radius: 4px;
-}
+} */
 
-.überuns__btn:hover::after {
-    width: 100%;
+.überuns__btn:hover {
+    transition: all 0.3s ease;
+
+    background: #ffdd00;
 }
 
 /* Über Uns mobile Version */
-@media screen and (max-width: 1024px) {
-    .überuns__content h1 {
-        font-size: 2rem;
-        /* Etwas kleinere Überschrift für mittelgroße Bildschirme */
-    }
-
-    .überuns__img--container img {
-        max-width: 90%;
-        /* Bilder etwas größer bei mittelgroßen Bildschirmen */
-    }
-}
-
 @media screen and (max-width: 768px) {
     .überuns__container {
         padding: 2rem 10px;
@@ -528,7 +526,8 @@
 
 /* Mitglied werden Section */
 .mitglied_werden {
-    background-color: #e66969;
+
+    background: linear-gradient(to bottom, #e66969 70%, #c34848);
     font-size: 1rem;
 }
 
@@ -539,8 +538,7 @@
     justify-self: center;
     margin: 0 auto;
     z-index: 1;
-    min-height: 80vh;
-    /* Ensure the height can't be less than 80vh */
+    min-height: 70vh;
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
@@ -591,13 +589,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #fffc00;
+    background: #ffee00;
     transition: all 0.35s;
     border-radius: 8px;
 }
 
-.mitglied_werden__btn:hover::after {
-    width: 100%;
+.mitglied_werden__btn:hover{
+    transition: all 0.3s ease;
+    background: #ffdd00;
 }
 
 .mitglied_werden__img--container {
@@ -611,35 +610,36 @@
 
 /* Mitlgiedsbeiträge Section */
 .mitgliedsbeiträge {
-    background-color: #BE5555;
+    background-color: #c34848;
     font-size: 1rem;
 }
 
 .mitgliedsbeiträge__container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 6rem;
+    padding: 0rem 3rem;
 }
 
 .mitgliedsbeiträge__content {
     color: #000;
     font-size: 1.2rem;
-    margin: 7rem 0;
+    margin: 2rem 0;
+    margin-bottom: 6rem;
 }
 
 .mitgliedsbeiträge__content h3 {
     color: #000;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 0.7rem;
 }
 
 .mitgliedsbeiträge__content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
 }
 
@@ -735,7 +735,7 @@ th:first-child, td:first-child {
     .mitgliedsbeiträge__container {
         display: flex;
         align-items: center;
-        justify-self: center;
+        justify-self: left;
         height: auto;
         width: 100%;
         margin: 0 auto;
@@ -749,8 +749,6 @@ th:first-child, td:first-child {
 
     .mitgliedsbeiträge__table {
         margin-top: 1rem;
-        border-collapse: inherit;
-        border-spacing: 2.5rem 0;
     }
 
 
@@ -823,9 +821,9 @@ th:first-child, td:first-child {
 
 .footer__links {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1700px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
 }
 
 .footer__link--wrapper {
@@ -836,14 +834,13 @@ th:first-child, td:first-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 16px;
     text-align: left;
     width: 160px;
     box-sizing: border-box;
 }
 
 .footer__link--items h2 {
-    margin-bottom: 16px;
+    margin-bottom: 0.5rem;
 }
 
 .footer__link-items>h2 {
@@ -854,10 +851,11 @@ th:first-child, td:first-child {
     color: #000;
     text-decoration: none;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .footer__link--items a:hover {
-    color: #e66969;
+    color: #ffb300;
     transition: 0.3s;
 }
 
@@ -867,9 +865,9 @@ th:first-child, td:first-child {
     align-items: flex-start;
     text-align: left;
     width: 160px;
-    padding-right: 5px;
     box-sizing: border-box;
     white-space: nowrap;
+    font-weight: 300;
 }
 
 .footer__text a {

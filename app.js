@@ -1,9 +1,11 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
+const content = document.querySelector('.content');
 
 menu.addEventListener('click', function(){
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
+    content.classList.toggle('blur');
 })
 
 const observerright = new IntersectionObserver((entries) => {
