@@ -51,6 +51,10 @@ a:active {
     padding: 0 50px;
 }
 
+.navbar__logo img {
+    width: 120px;
+}
+
 .navbar__menu {
     display: flex;
     align-items: center;
@@ -156,7 +160,8 @@ a:active {
     }
 
     .navbar__logo img {
-        width: 25vw;
+        width: 20vw;
+        max-width: 90px; 
     }
 
     .navbar__toggle {
