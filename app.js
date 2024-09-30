@@ -1,14 +1,17 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
+const navbar= document.querySelector('.navbar');
 const content = document.querySelector('.content');
 
 menu.addEventListener('click', function(){
+    navbar.classList.toggle('is-active');
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
     content.classList.toggle('blur');
 })
 
 const observerright = new IntersectionObserver((entries) => {
+
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('überuns__visible');
@@ -19,6 +22,7 @@ const observerright = new IntersectionObserver((entries) => {
 });
 
 const observerleft = new IntersectionObserver((entries) => {
+    
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('überuns__visible');
