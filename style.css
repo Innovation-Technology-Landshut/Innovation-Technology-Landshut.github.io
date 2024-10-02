@@ -855,7 +855,7 @@ td:first-child {
 /* Spendenseite Section */
 
 .spendenseite {
-    background: linear-gradient(#18479e 60%, #2b2987);
+    background: linear-gradient(#18479e , #a4e2ff);
   }
   
   .spendenseite__container {
@@ -872,7 +872,7 @@ td:first-child {
   }
   
   .spendenseite__content {
-    color: #fff;
+    color: #000;
     font-size: 1.5rem;
     font-weight: 300;
     margin: 2rem 0;
@@ -899,31 +899,27 @@ td:first-child {
     height: 100%;
   }
   
-  .spendenseite__btn {
-    font-size: 1.2rem;
-    background: #ffcc00;
-    color: #000;
-    padding: 18px 50px;
+  .paypal__btn--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .paypal__btn {
+    text-align: center;
     border: none;
     border-radius: 8px;
-    margin-top: 2rem;
+    min-width: 11.625rem;
+    margin: 1rem 0;
+    padding: 0 2rem;
+    height: 3rem;
+    font-weight: bold;
+    background-color: #FFD140;
+    color: #000000;
+    font-size: 1.2rem;
+    line-height: 1.25rem;
     cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
-  }
-  
-  .spendenseite__btn a {
-    position: relative;
-    z-index: 2;
-    color: #000;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .spendenseite__btn:hover {
-    transition: all 0.3s ease;
-    background: #ffdd00;
   }
   
   @media screen and (max-width: 768px) {

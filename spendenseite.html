@@ -58,10 +58,17 @@
             ermöglicht es uns, <strong>Veranstaltungen zu organisieren</strong>, Workshops
             anzubieten und die <strong>Infrastruktur des Vereins zu verbessern</strong>.
           </p>
-          <button class="spendenseite__btn">
-            <!-- spendenlink einfügen -->
-            <a href="https://www.paypal.com/ncp/payment/PCHDNPDLESELQ">Jetzt spenden</a>
-          </button>
+          <div class="paypal__btn--container">
+            <form action="https://www.paypal.com/ncp/payment/PCHDNPDLESELQ" method="post" target="_top"
+              style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="paypal__btn" type="submit" value="Jetzt Spenden" />
+              <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+              <section> Abgewickelt durch <img
+                  src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal"
+                  style="height:0.875rem;vertical-align:middle;" />
+              </section>
+            </form>
+          </div>
         </div>
         <!-- <h1 class="spendenseite__title">Hauptsponsoren</h1> -->
       </div>
