@@ -559,7 +559,7 @@ a:active {
 
 .mitglied_werden {
 
-    background: linear-gradient(to bottom, #e66969 70%, #c34848);
+    background: linear-gradient(to bottom, #e66969 , #9f1f1f);
     font-size: 1rem;
 }
 
@@ -570,7 +570,7 @@ a:active {
     justify-self: center;
     margin: 0 auto;
     z-index: 1;
-    min-height: 70vh;
+    min-height: 90vh;
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
@@ -640,33 +640,17 @@ a:active {
     height: 100%;
 }
 
-/* Mitlgiedsbeiträge Section */
-.mitgliedsbeiträge {
-    background-color: #c34848;
-    font-size: 1rem;
-}
-
-.mitgliedsbeiträge__container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0rem 3rem;
-}
-
 .mitgliedsbeiträge__content {
     color: #000;
     font-size: 1.2rem;
-    margin: 2rem 0;
+    margin: 6rem 0;
     margin-bottom: 6rem;
 }
 
 .mitgliedsbeiträge__content h3 {
     color: #000;
     font-size: 1.8rem;
-    font-weight: 900;
+    font-weight: 500;
     margin-bottom: 0.7rem;
 }
 
@@ -765,23 +749,14 @@ td:first-child {
         outline: none;
     }
 
-    /* Mitgliedsbeiträge mobile section */
-    .mitgliedsbeiträge__container {
-        display: flex;
-        align-items: center;
-        justify-self: left;
-        height: auto;
-        width: 100%;
-        margin: 0 auto;
-        padding: 2rem 15px;
-    }
-
     .mitgliedsbeiträge__content {
+        padding: 2rem 15px;
         font-size: 1.2rem;
         margin: 3rem 0;
     }
 
     .mitgliedsbeiträge__table {
+        text-align: left;
         margin-top: 1rem;
     }
 
