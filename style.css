@@ -125,7 +125,7 @@ a:active {
 
     .blur {
         filter: blur(10px);
-        transition: all 0.7s ease;
+        transition: all 0.5s ease;
     }
 
     .navbar__logo {
@@ -170,21 +170,18 @@ a:active {
         position: absolute;
         top: 55px;
         width: 100%;
-        height: 0;
+        height: auto;
         background-color: #fff;
         font-size: 1.2rem;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
-        transition: all 0.5s ease;
         overflow: hidden;
-        opacity: 1;
+        transition: clip-path 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        clip-path: inset(0 0 100% 0);
     }
 
     .navbar__menu.active {
-        opacity: 1;
-        height: 300px;
-        overflow: visible;
-        transition: all 0.5s ease;
+        clip-path: inset(0 0 0 0);
     }
 
 
@@ -224,7 +221,7 @@ a:active {
     /* Navbar Toggle (Striche) */
     .navbar__toggle {
         cursor: pointer;
-        padding-top: 10px;
+        padding-top: 7px;
     }
 
     .navbar__toggle .bar {
