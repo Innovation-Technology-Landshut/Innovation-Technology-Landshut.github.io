@@ -55,11 +55,6 @@ a:active {
     width: 120px;
 }
 
-
-/* Hier entsteht ein neues Dropdown Menü */
-
-
-
 .navbar__menu {
     display: flex;
     align-items: center;
@@ -169,19 +164,6 @@ a:active {
         max-width: 90px; 
     }
 
-    .navbar__toggle {
-        cursor: pointer;
-        padding-top: 9px;
-    }
-
-    .navbar__toggle .bar {
-        width: 20px;
-        height: 2px;
-        margin: 3px auto;
-        transition: all 0.3s ease-in-out;
-        background: #000;
-    }
-
     .navbar__item {
         width: 100%;
     }
@@ -214,23 +196,46 @@ a:active {
         margin: 0;
     }
 
+    /* Navbar Toggle (Striche) */
+    .navbar__toggle {
+        cursor: pointer;
+        padding-top: 10px;
+    }
+
+    .navbar__toggle .bar {
+        height: 2px;
+        margin: 3px auto;
+        transition: all 0.3s ease-in-out;
+        background: #000;
+    }
+    
+    /* Navbar Toggle (Striche) */
     .navbar__toggle .bar {
         display: block;
         cursor: pointer;
     }
 
-    #mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0;
+    .navbar__toggle .bar:nth-child(1) {
+        width: 20px;
+        transform: translateX(2.5px);
     }
 
+    .navbar__toggle .bar:nth-child(2) {
+        width: 25px;
+    }
+
+    /* Navbar Toggle (Striche) wenn Menü aktiv ist */
     #mobile-menu.is-active .bar:nth-child(1) {
-        transform: translateY(5px) rotate(45deg);
+        width: 20px;
+        transform: translateY(2.5px) rotate(-45deg);
     }
 
-    #mobile-menu.is-active .bar:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg);
+    #mobile-menu.is-active .bar:nth-child(2) {
+        width: 20px;
+        transform: translateY(-2.5px) rotate(45deg);
     }
 
+    /* Blur effect wenn Menü aktiv ist*/
     .navbar.is-active {
         background: rgba(255, 255, 255, 1);
         backdrop-filter: unset;
