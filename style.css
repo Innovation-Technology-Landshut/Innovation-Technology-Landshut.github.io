@@ -1,9 +1,9 @@
+/* Allgemeine Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Figtree', sans-serif;
-
     -webkit-tabhighlight-color: transparent;
 }
 
@@ -11,6 +11,7 @@ input,
 textarea,
 button,
 select,
+.navbar__toggle,
 a {
     -webkit-tap-highlight-color: transparent;
 }
@@ -22,10 +23,7 @@ a:active {
 }
 
 
-
-
 /* Navbar */
-
 .navbar {
     background: rgba(255, 255, 255, 0.9);
     height: 80px;
@@ -120,34 +118,11 @@ a:active {
         display: flex;
         justify-content: space-between;
         height: 80px;
-        z-index: 1;
+        z-index: 999;
         width: 100%;
         max-width: 1300px;
         padding: 0;
 
-    }
-
-    .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;
-        z-index: -1;
-    }
-
-    .navbar__menu.active {
-        background: rgba(255, 255, 255, 1);
-        opacity: 1;
-        top: 100%;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 40vh;
-        font-size: 1.2rem;
     }
 
     .blur {
@@ -161,7 +136,7 @@ a:active {
 
     .navbar__logo img {
         width: 20vw;
-        max-width: 90px; 
+        max-width: 90px;
     }
 
     .navbar__item {
@@ -175,12 +150,6 @@ a:active {
         display: table;
     }
 
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: tanslate(-5%, 20%);
-    }
 
     .navbar__btn {
         padding-bottom: 2rem;
@@ -196,6 +165,41 @@ a:active {
         margin: 0;
     }
 
+    /* Neues Dropdown Menü */
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 0px; /* Start the animation just below the navbar */
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 0;
+        overflow: hidden;
+        z-index: -1; /* Ensure it stays below the navbar */
+    }
+
+    /* Menü aktiv */
+    .navbar__menu.active {
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        top: 55px; /* Ensure it stays just below the navbar */
+        transition: all 0.5s ease;
+        height: auto;
+        overflow: visible;
+        font-size: 1.2rem;
+    }
+       
+
+    /* Navbar Toggle (Striche) Position*/
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: tanslate(-5%, 20%);
+    }
+
     /* Navbar Toggle (Striche) */
     .navbar__toggle {
         cursor: pointer;
@@ -208,7 +212,7 @@ a:active {
         transition: all 0.3s ease-in-out;
         background: #000;
     }
-    
+
     /* Navbar Toggle (Striche) */
     .navbar__toggle .bar {
         display: block;
@@ -217,7 +221,7 @@ a:active {
 
     .navbar__toggle .bar:nth-child(1) {
         width: 20px;
-        transform: translateX(2.5px);
+        transform: translateX(2px);
     }
 
     .navbar__toggle .bar:nth-child(2) {
@@ -245,7 +249,7 @@ a:active {
 
 
 
-
+/* main */
 
 /* Startseite Section */
 
@@ -293,7 +297,7 @@ a:active {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     font-weight: 600;
-  }
+}
 
 .main__btn:hover {
     background: #ffdd00;
@@ -458,7 +462,7 @@ a:active {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     font-weight: 600;
-  }
+}
 
 .überuns__btn:hover {
     background: #ffdd00;
@@ -553,7 +557,7 @@ a:active {
 
 .mitglied_werden {
 
-    background: linear-gradient(to bottom, #e66969 , #9f1f1f);
+    background: linear-gradient(to bottom, #e66969, #9f1f1f);
     font-size: 1rem;
 }
 
@@ -599,7 +603,7 @@ a:active {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     font-weight: 600;
-  }
+}
 
 .mitglied_werden__btn:hover {
     background: #ffdd00;
@@ -804,58 +808,58 @@ td:first-child {
 /* Spendenseite Section */
 
 .spendenseite {
-    background: linear-gradient(#18479e , #a4e2ff);
-  }
-  
-  .spendenseite__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-self: center;
-      margin: 0 auto;
-      z-index: 1;
-      min-height: 90vh;
-      width: 100%;
-      max-width: 1300px;
-      padding: 0 50px;
-  }
-  
-  .spendenseite__content {
+    background: linear-gradient(#18479e, #a4e2ff);
+}
+
+.spendenseite__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    z-index: 1;
+    min-height: 90vh;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.spendenseite__content {
     color: #000;
     font-size: 1.5rem;
     font-weight: 300;
     margin: 2rem 0;
-  }
-  
-  .spendenseite__content h1 {
+}
+
+.spendenseite__content h1 {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 2rem;
-  }
-  
-  .spendenseite__content p {
+}
+
+.spendenseite__content p {
     font-size: 1.3rem;
     font-weight: 300;
-  }
-  
-  .spendenseite__img--container {
+}
+
+.spendenseite__img--container {
     text-align: center;
     margin: 0 2rem
-  }
-  
-  .spendenseite__img {
+}
+
+.spendenseite__img {
     width: 100%;
     height: 100%;
-  }
-  
-  .paypal__btn--container{
+}
+
+.paypal__btn--container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-  }
+}
 
-  .paypal__btn {
+.paypal__btn {
     text-align: center;
     border: none;
     border-radius: 8px;
@@ -869,56 +873,58 @@ td:first-child {
     font-size: 1.2rem;
     line-height: 1.25rem;
     cursor: pointer;
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     .spendenseite__container {
-      display: grid;
-      grid-template-columns: auto;
-      align-items: center;
-      justify-self: center;
-      height: auto;
-      width: 100%;
-      margin: 0 auto;
-      padding: 2rem 10px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 10px;
     }
-  
+
     .spendenseite__content {
-      text-align: center;
-      margin: 2rem 0;
+        text-align: center;
+        margin: 2rem 0;
     }
-  
+
     .spendenseite__content h1 {
-      font-size: 1.9rem;
+        font-size: 1.9rem;
     }
-  
+
     .spendenseite__content p {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
-  
+
     .spendenseite__btn {
-      font-size: 1.2rem;
-      background: #ffcc00;
-      color: #000;
-      width: 90%;
-      max-width: 400px;
-      border: none;
-      border-radius: 8px;
-      margin-top: 4rem;
-      margin-bottom: 2rem;
-      cursor: pointer;
-      position: relative;
-      transition: all 0.35s;
-      outline: none;
+        font-size: 1.2rem;
+        background: #ffcc00;
+        color: #000;
+        width: 90%;
+        max-width: 400px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.35s;
+        outline: none;
     }
 
     .spendenseite__img--container {
-      margin: 3rem;
+        margin: 3rem;
     }
+
     .spendenseite__img--container img {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
+}
+
 
 
 
