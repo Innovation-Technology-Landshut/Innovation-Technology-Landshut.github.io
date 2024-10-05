@@ -55,6 +55,11 @@ a:active {
     width: 120px;
 }
 
+
+/* Hier entsteht ein neues Dropdown Menü */
+
+
+
 .navbar__menu {
     display: flex;
     align-items: center;
