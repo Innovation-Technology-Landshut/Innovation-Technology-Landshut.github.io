@@ -176,39 +176,14 @@ a:active {
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
         overflow: hidden;
-        transition: clip-path 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         clip-path: inset(0 0 100% 0);
     }
 
     .navbar__menu.active {
         clip-path: inset(0 0 0 0);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-
-
-
-    /* .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        transition: all 0.5s ease;
-        height: 0;
-        overflow: hidden;
-    } */
-
-    /* Menü aktiv */
-    /* .navbar__menu.active {
-        background: rgba(255, 255, 255, 1);
-        top: 55px;
-        transition: all 0.5s ease;
-        height: auto;
-        overflow: visible;
-        font-size: 1.2rem;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-    } */
 
     /* Navbar Toggle (Striche) Position */
     #mobile-menu {
@@ -239,7 +214,7 @@ a:active {
 
     .navbar__toggle .bar:nth-child(1) {
         width: 20px;
-        transform: translateX(2px);
+        transform: translateX(2.5px);
     }
 
     .navbar__toggle .bar:nth-child(2) {
