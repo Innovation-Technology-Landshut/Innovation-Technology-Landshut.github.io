@@ -302,6 +302,17 @@ a:active {
     overflow: scroll;
 }
 
+.card.third {
+    background: #2b2987;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    height: 80vh;
+    z-index: 1;
+    padding: 0 50px;
+}
+
 .spacer {
     min-width: 50vw; /* Platz entspricht 50% der Bildschirmbreite */
     flex-shrink: 0; /* Verhindert Schrumpfen */
