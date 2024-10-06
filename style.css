@@ -263,7 +263,7 @@ a:active {
 }
 
 .card {
-    min-width: 200px;
+    width: 90vw;
     max-width: 1300px;
     background-color: white;
     padding: 20px;
@@ -299,6 +299,7 @@ a:active {
     height: 80vh;
     z-index: 1;
     padding: 0 50px;
+    overflow: scroll;
 }
 
 .spacer {
