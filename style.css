@@ -255,7 +255,7 @@ a:active {
 .card-container {
     display: flex;
     overflow-x: auto; /* Ermöglicht horizontales Scrollen */
-    gap: 3rem;
+    gap: 2rem;
     padding: 20px;
     scroll-snap-type: x mandatory; /* Snap in der horizontalen Richtung aktivieren */
     scrollbar-width: thin; /* Für Firefox */
