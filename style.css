@@ -7,6 +7,38 @@
     -webkit-tabhighlight-color: transparent;
 }
 
+:root{
+    /*Hintergründe*/
+    /*Navbar*/
+    --weiß: #ffffffe6;
+    /*Startseite*/
+    --hellblau: #6cd0ff;
+    /*Über Uns*/
+    --gelb: #ffcc00;
+    /*Mitglied werden*/
+    /*Instagram*/
+    --rot: #e66969;
+    /*Impressum*/
+    /*Spendenseite*/
+    /*Dankeseite*/
+    --blau: #2b2987;
+
+    /*Schriftfarben*/
+    --text: #000;
+    --sec_text: #fff;
+
+    /*Buttons*/
+    --button: #ffcc00;
+
+    /*Hover*/
+    /*Buttons*/
+    --button_hover: #ffdd00;
+    /*Links*/
+    --links_hover: #ffb300;
+
+}
+
+
 input,
 textarea,
 button,
@@ -37,7 +69,7 @@ a:active {
 
 /* Navbar */
 .navbar {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--weiß);
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -78,7 +110,7 @@ a:active {
 }
 
 .navbar__links {
-    color: #000;
+    color: var(--text_hover);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +122,7 @@ a:active {
 
 .navbar__links:hover {
     transition: 0.3s;
-    color: #ffb300;
+    color: var(--button);
 }
 
 .navbar__btn {
@@ -111,13 +143,13 @@ a:active {
     border: none;
     outline: none;
     border-radius: 8px;
-    background: #ffcc00;
+    background: var(--button);
     color: #000;
 }
 
 .button:hover {
     transition: all 0.3s ease;
-    background: #ffdd00;
+    background: var(--button_hover);
 }
 /* Mobile Version */
 @media screen and (max-width: 960px) {
