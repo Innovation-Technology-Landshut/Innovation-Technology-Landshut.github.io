@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardWidth = cards[0].offsetWidth + 16; // Kartenbreite + Abstand
 
         // Aktuelle Karte bestimmen
-        const currentIndex = Math.round(scrollLeft / cardWidth);
+        const currentIndex = Math.round(scrollLeft / cardWidth) - 1;
         updateActiveDot(currentIndex);
     });
 
