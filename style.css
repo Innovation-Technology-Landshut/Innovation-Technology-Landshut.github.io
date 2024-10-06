@@ -252,21 +252,55 @@ a:active {
 
 /* Startseite Section */
 
-.main {
-    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    justify-content: left;
+    align-items: center;
     font-size: 1.5rem;
+    margin: 0 auto;
+    overflow: scroll;
 }
 
-.main__container {
+.container {
+    margin: 30vw;
+    width: 50vw;
+    height: 60vh;
+    max-width: 1300px;
+    border-radius: 16px;
+    margin: 0 2rem;
+}
+
+.container:nth-child(1){
+    position: relative;
+    left:  25vw;
+}
+.container:nth-child(2){
+    position: ;
+    left: 5vw;
+}
+
+.container.main{
+    background: #a4e2ff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
-    margin: 0 auto;
-    min-height: 90vh;
+    min-height: 70vh;
     z-index: 1;
-    width: 100%;
-    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.container.mitglied_werden{
+    position: relative;
+    background: #e66969;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    min-height: 70vh;
+    z-index: 1;
     padding: 0 50px;
 }
 
