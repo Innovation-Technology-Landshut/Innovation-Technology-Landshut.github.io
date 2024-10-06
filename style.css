@@ -9,7 +9,7 @@
 
 :root{
     /*Hintergründe*/
-    --navbar: var(--text_sec);
+    --navbar: #fff;
     --navbar_trans: #ffffffe6;
 
     --startseite: #a4e2ff;
