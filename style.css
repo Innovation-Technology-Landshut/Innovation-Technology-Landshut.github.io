@@ -252,57 +252,89 @@ a:active {
 
 /* Startseite Section */
 
-.main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #fff;
-    justify-content: left;
-    align-items: center;
-    font-size: 1.5rem;
-    margin: 0 auto;
-    overflow: scroll;
+.card-container {
+    display: flex;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    gap: 3rem;
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Snap in der horizontalen Richtung aktivieren */
+    scrollbar-width: thin; /* Für Firefox */
+    scroll-behavior: smooth; /* Weiches Scrollen */
 }
 
-.container {
-    margin: 30vw;
-    width: 50vw;
-    height: 60vh;
+.card {
+    min-width: 200px;
     max-width: 1300px;
-    border-radius: 16px;
-    margin: 0 2rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: center; /* Jede Karte wird zentriert beim Snapping */
 }
 
-.container:nth-child(1){
-    position: relative;
-    left:  25vw;
-}
-.container:nth-child(2){
-    position: ;
-    left: 5vw;
+.card:hover {
+    transform: scale(1.01); /* Vergrößern der Karte beim Hover */
 }
 
-.container.main{
+.card.first {
     background: #a4e2ff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
-    min-height: 70vh;
+    height: 80vh;
     z-index: 1;
     padding: 0 50px;
 }
 
-.container.mitglied_werden{
+.card.second {
     position: relative;
     background: #e66969;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
-    min-height: 70vh;
+    height: 80vh;
     z-index: 1;
     padding: 0 50px;
 }
+
+.spacer {
+    min-width: 50vw; /* Platz entspricht 50% der Bildschirmbreite */
+    flex-shrink: 0; /* Verhindert Schrumpfen */
+}
+
+.card-container::-webkit-scrollbar { /* Scrollbar entfernen */
+    width: 0;
+}
+
+/* Punkt-Navigation */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Aktiver Punkt */
+.dot.active {
+    background-color: #333;
+}
+
+
+
+
 
 .main__content h1 {
     font-size: 3rem;
