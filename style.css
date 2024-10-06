@@ -9,23 +9,23 @@
 
 :root{
     /*Hintergründe*/
-    /*Navbar*/
-    --weiß: #ffffffe6;
-    /*Startseite*/
-    --hellblau: #6cd0ff;
-    /*Über Uns*/
-    --gelb: #ffcc00;
-    /*Mitglied werden*/
-    /*Instagram*/
-    --rot: #e66969;
-    /*Impressum*/
-    /*Spendenseite*/
-    /*Dankeseite*/
-    --blau: #2b2987;
+    --navbar: var(--text_sec);
+    --navbar_trans: #ffffffe6;
+
+    --startseite: #a4e2ff;
+    --startseite_sec: #6cd0ff;
+
+    --überuns: #ffcc00;
+
+    --mitgliedwerden: #e66969;
+    --mitgliedwerden_sec: #9f1f1f;
+
+    --spendenseite: #2b2987;
+    --spendenseite_sec: #a4e2ff;
 
     /*Schriftfarben*/
     --text: #000;
-    --sec_text: #fff;
+    --text_sec: #fff;
 
     /*Buttons*/
     --button: #ffcc00;
@@ -35,7 +35,6 @@
     --button_hover: #ffdd00;
     /*Links*/
     --links_hover: #ffb300;
-
 }
 
 
@@ -69,7 +68,7 @@ a:active {
 
 /* Navbar */
 .navbar {
-    background: var(--weiß);
+    background: var(--navbar_trans);
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -102,7 +101,7 @@ a:active {
     align-items: center;
     list-style: none;
     text-align: center;
-
+    color: var(--text);
 }
 
 .navbar__item {
@@ -144,7 +143,7 @@ a:active {
     outline: none;
     border-radius: 8px;
     background: var(--button);
-    color: #000;
+    color: var(--text);
 }
 
 .button:hover {
@@ -210,7 +209,7 @@ a:active {
         top: 55px;
         width: 100%;
         height: auto;
-        background-color: #fff;
+        background-color: var(--text_sec);
         font-size: 1.2rem;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
@@ -242,7 +241,7 @@ a:active {
         height: 2px;
         margin: 3px auto;
         transition: all 0.3s ease-in-out;
-        background: #000;
+        background: var(--text);
     }
 
     /* Navbar Toggle (Striche) */
@@ -273,7 +272,7 @@ a:active {
 
     /* Blur effect wenn Menü aktiv ist */
     .navbar.is-active {
-        background: rgba(255, 255, 255, 1);
+        background: var(--navbar);
         backdrop-filter: unset;
     }
 }
@@ -285,7 +284,7 @@ a:active {
 /* Startseite Section */
 
 .main {
-    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
+    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
     font-size: 1.5rem;
 }
 
@@ -309,15 +308,15 @@ a:active {
 
 .main__content h2 {
     padding-top: 2rem;
-    color: rgb(255, 255, 255);
+    color: var(--text_sec);
     font-size: 2.5rem;
     font-weight: 500;
 }
 
 .main__btn {
-    background-color: #ffcc00;
+    background-color: var(--button);
     border: none;
-    color: #000;
+    color: var(--text);
     padding: 18px 50px;
     text-align: center;
     text-decoration: none;
@@ -331,7 +330,7 @@ a:active {
 }
 
 .main__btn:hover {
-    background: #ffdd00;
+    background: var(--button_hover);
 }
 
 .main__img--container {
@@ -384,8 +383,8 @@ a:active {
 
     .main__btn {
         font-size: 1.2rem;
-        background: #ffcc00;
-        color: #000;
+        background: var(--button);
+        color: var(--text);
         width: 100%;
         max-width: 400px;
         border: none;
@@ -407,16 +406,16 @@ a:active {
 /* Über Uns Section */
 
 .überuns {
-    background: linear-gradient(to bottom, #ffd52f 70%, #ecb81b);
+    background: var(--überuns);
     font-size: 1rem;
 }
 
 .überuns.right {
-    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
+    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
 }
 
 .überuns.bottom {
-    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
+    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
 }
 
 .überuns__container {
@@ -480,9 +479,9 @@ a:active {
 }
 
 .überuns__btn {
-    background-color: #ffcc00;
+    background-color: var(--button);
     border: none;
-    color: #000;
+    color: var(--text);
     padding: 18px 50px;
     text-align: center;
     text-decoration: none;
@@ -496,7 +495,7 @@ a:active {
 }
 
 .überuns__btn:hover {
-    background: #ffdd00;
+    background: var(--button_hover);
 }
 
 /* Über Uns mobile Version */
@@ -549,8 +548,8 @@ a:active {
     .überuns__btn {
         display: block;
         font-size: 1.2rem;
-        background: #ffcc00;
-        color: #000;
+        background: var(--button);
+        color: var(--text);
         width: 100%;
         max-width: 400px;
         padding: 20px 0px;
@@ -588,7 +587,7 @@ a:active {
 
 .mitglied_werden {
 
-    background: linear-gradient(to bottom, #e66969, #9f1f1f);
+    background: linear-gradient(to bottom, var(--mitgliedwerden), var(--mitgliedwerden_sec));
     font-size: 1rem;
 }
 
@@ -606,7 +605,7 @@ a:active {
 }
 
 .mitglied_werden__content {
-    color: #000;
+    color: var(--text);
     font-size: 1.5rem;
     font-weight: 300;
     margin: 6rem 0;
@@ -621,9 +620,9 @@ a:active {
 }
 
 .mitglied_werden__btn {
-    background-color: #ffcc00;
+    background-color: var(--button);
     border: none;
-    color: #000;
+    color: var(--text);
     padding: 18px 50px;
     text-align: center;
     text-decoration: none;
@@ -637,7 +636,7 @@ a:active {
 }
 
 .mitglied_werden__btn:hover {
-    background: #ffdd00;
+    background: var(--button_hover);
 }
 
 .mitglied_werden__img--container {
@@ -650,14 +649,14 @@ a:active {
 }
 
 .mitgliedsbeiträge__content {
-    color: #000;
+    color: var(--text);
     font-size: 1.2rem;
     margin: 6rem 0;
     margin-bottom: 6rem;
 }
 
 .mitgliedsbeiträge__content h3 {
-    color: #000;
+    color: var(--text);
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 0.7rem;
@@ -682,34 +681,6 @@ td:first-child {
 .mitgliedsbeiträge__table th {
     padding: 1rem 0;
 }
-
-/* .mitglied_werden_form {
-    display: inline-block;
-    padding-top: 20px;
-}
-
-.mitglied_werden_ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mitglied_werden__li_li {
-    margin-top: 1em;
-} */
-
-/* .mitglied_werden_label {
-    display: inline-block;
-    min-width: 90px;
-  } */
-
-/* .mitglied_werden_input,
-.mitglied_werden_textarea {
-  width: 300px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-  border-radius: 4px;
-} */
 
 @media screen and (max-width: 768px) {
     .mitglied_werden__container {
@@ -744,8 +715,8 @@ td:first-child {
 
     .mitglied_werden__btn {
         font-size: 1.2rem;
-        background: #ffcc00;
-        color: #000;
+        background: var(--button);
+        color: var(--text);
         width: 90%;
         max-width: 400px;
         border: none;
@@ -780,7 +751,7 @@ td:first-child {
 /* Instagram Section */
 
 .instagram {
-    background-color: #e66969;
+    background-color: var(--mitgliedwerden);
     font-size: 1.5rem;
 }
 
@@ -800,7 +771,7 @@ td:first-child {
 /* Impressum Section */
 
 .impressum {
-    background-color: #2b2987;
+    background-color: var(--spendenseite);
 }
 
 .impressum__container {
@@ -816,7 +787,7 @@ td:first-child {
 }
 
 .impressum__content {
-    color: #fff;
+    color: var(--text_sec);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -839,7 +810,7 @@ td:first-child {
 /* Spendenseite Section */
 
 .spendenseite {
-    background: linear-gradient(#18479e, #a4e2ff);
+    background: linear-gradient(var(--spendenseite), var(--spendenseite_sec));
 }
 
 .spendenseite__container {
@@ -856,7 +827,7 @@ td:first-child {
 }
 
 .spendenseite__content {
-    color: #000;
+    color: var(--text);
     font-size: 1.5rem;
     font-weight: 300;
     margin: 2rem 0;
@@ -899,11 +870,16 @@ td:first-child {
     padding: 0 2rem;
     height: 3rem;
     font-weight: bold;
-    background-color: #FFD140;
-    color: #000000;
+    background-color: var(--button);
+    color: var(--text);
     font-size: 1.2rem;
     line-height: 1.25rem;
     cursor: pointer;
+}
+
+.paypal__btn:hover {
+    transition: 0.3s;
+    background: var(--button_hover);
 }
 
 @media screen and (max-width: 768px) {
@@ -933,8 +909,8 @@ td:first-child {
 
     .spendenseite__btn {
         font-size: 1.2rem;
-        background: #ffcc00;
-        color: #000;
+        background: var(--button);
+        color: var(--text);
         width: 90%;
         max-width: 400px;
         border: none;
@@ -962,8 +938,8 @@ td:first-child {
 /* Footer Section */
 
 .footer__container {
-    background: #fff;
-    color: #000;
+    background: var(--text_sec);
+    color: var(--text);
     padding-top: 4rem;
     padding-bottom: 2rem;
     display: flex;
@@ -998,18 +974,18 @@ td:first-child {
 }
 
 .footer__link-items>h2 {
-    color: #000;
+    color: var(--text);
 }
 
 .footer__link--items a {
-    color: #000;
+    color: var(--text);
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .footer__link--items a:hover {
-    color: #ffb300;
+    color: var(--links_hover);
     transition: 0.3s;
 }
 
@@ -1025,7 +1001,7 @@ td:first-child {
 }
 
 .footer__text a {
-    color: #000;
+    color: var(--text);
     text-decoration: none;
 }
 
