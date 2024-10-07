@@ -94,28 +94,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const container = document.querySelector('.card-container');
-//     const cardWidth = document.querySelector('.card').offsetWidth;
 
-//     function scrollRight() {
-//         container.scrollLeft += cardWidth; // Scrollt um die Breite einer Karte nach rechts
-//     }
-//     function scrollLeft() {
-//         container.scrollLeft -= cardWidth; // Scrollt um die Breite einer Karte nach links
-//     }
-
-//     // Attach the scroll functions to buttons or other elements as needed
-//     document.querySelector('.scroll-button.right').addEventListener('click', scrollRight);
-//     document.querySelector('.scroll-button.left').addEventListener('click', scrollLeft);
-// });
 const container = document.querySelector('.card-container');
-const cardWidth = document.querySelector('.card').offsetWidth;
+const cardWidth = document.querySelector('.card').offsetWidth + 16; // Kartenbreite + Abstand
 let scrollInterval;
 
 // Funktion zum Scrollen nach rechts
 function scrollRight() {
-    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth - container.offsetWidth) {
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth - cardWidth) {
         container.scrollLeft = 0; // Zurück zum Anfang, wenn das Ende erreicht ist
     } else {
         container.scrollLeft += cardWidth;
@@ -124,7 +110,7 @@ function scrollRight() {
 
 // Funktion zum Scrollen nach links
 function scrollLeft() {
-    if (container.scrollLeft === 0) {
+    if (container.scrollLeft <= 0) {
         container.scrollLeft = container.scrollWidth - container.offsetWidth; // Zum Ende springen, wenn am Anfang
     } else {
         container.scrollLeft -= cardWidth;
