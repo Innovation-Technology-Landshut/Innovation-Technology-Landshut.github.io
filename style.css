@@ -368,6 +368,22 @@ body {
     display: none;
 }
 
+
+.tool-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.tool-container button {
+    text-align: right;
+}
+
+
+
+
+
 /* Punkt-Navigation */
 .pagination {
     display: flex;
@@ -390,30 +406,24 @@ body {
     background-color: #333;
 }
 
-.scroll-btn {
+.scroll-button {
     background-color: transparent;
     color: var(--text);
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
     top: 88vh;
     z-index: 999;
     scale: 2;
 }
 
-.scroll-btn.left {
+.scroll-button.left {
     left: 70%;
 }
 
-.scroll-btn.right {
+.scroll-button.right {
     right: 20%;
 }
-
-
-
-
 
 .card__content h1 {
     font-size: 3rem;

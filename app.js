@@ -94,12 +94,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-const container = document.querySelector('.card-container');
-const cardWidth = document.querySelector('.card').offsetWidth;
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.card-container');
+    const cardWidth = document.querySelector('.card').offsetWidth;
 
-function scrollRight() {
-    container.scrollLeft += cardWidth; // Scrollt um die Breite einer Karte nach rechts
-}
-function scrollLeft() {
-    container.scrollLeft -= cardWidth; // Scrollt um die Breite einer Karte nach links
-}
+    function scrollRight() {
+        container.scrollLeft += cardWidth; // Scrollt um die Breite einer Karte nach rechts
+    }
+    function scrollLeft() {
+        container.scrollLeft -= cardWidth; // Scrollt um die Breite einer Karte nach links
+    }
+
+    // Attach the scroll functions to buttons or other elements as needed
+    document.querySelector('.scroll-button.right').addEventListener('click', scrollRight);
+    document.querySelector('.scroll-button.left').addEventListener('click', scrollLeft);
+});
