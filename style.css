@@ -262,56 +262,98 @@ a:active {
     scroll-behavior: smooth; /* Weiches Scrollen */
 }
 
-.card {
+.card {    
+    height: 70vh;
     width: 90vw;
     max-width: 1300px;
-    background-color: white;
-    padding: 20px;
+    flex: 0 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 0 0 auto;
-    transition: transform 0.3s ease-in-out;
-    scroll-snap-align: center; /* Jede Karte wird zentriert beim Snapping */
-    overflow: scroll;
+    scroll-snap-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card.first{
+    background-color: #a4e2ff;
+}
+
+.card.second{
+    background-color: #e66969;
+}
+
+.card.third{
+    background-color: #2b2987;
 }
 
 .card:hover {
-    transform: scale(1.01); /* Vergrößern der Karte beim Hover */
+    transform: scale(1.02);
 }
 
-.card.first {
-    background: #a4e2ff;
+.card__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
-    height: 80vh;
+    margin: 0 auto;
     z-index: 1;
-    padding: 0 50px;
+    width: 100%;
+    max-width: 1300px;
 }
 
-.card.second {
-    position: relative;
-    background: #e66969;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    height: 80vh;
-    z-index: 1;
-    padding: 0 50px;
+.card__content {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
-.card.third {
-    background: #2b2987;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    height: 80vh;
-    z-index: 1;
-    padding: 0 50px;
+.card__title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
+
+.card__text {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.card__img__container {
+    text-align: center;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__btn {
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    padding: 18px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.card__btn:hover {
+    background: #ffdd00;
+}
+
+
+
+
+
+
 
 .spacer {
     min-width: 50vw; /* Platz entspricht 50% der Bildschirmbreite */
@@ -346,56 +388,15 @@ a:active {
 
 
 @media screen and (max-width: 768px) {
-    .card-container {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        max-height: 1300px;
-    }
 
-    .card {
-        width: 95vw;
-        max-width: 1300px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        flex: 0 0 auto;
-        align-items: center;
-        justify-self: center;
-        transition: transform 0.3s ease-in-out;
-        overflow: hidden;
-        min-height: 520px;
-        height: 80vh;
-        margin: 1rem;
-        z-index: 2;
-    }
 
-    .card img{
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
 
-    .card.first {
-        background: #a4e2ff;
-        display: grid;
-        grid-template-columns:auto;
-        padding: 2rem;
-    }
 
-    .card.second {
-        background: #e66969;
-        display: grid;
-        grid-template-columns: auto;
-        padding: 2rem;
-    }
 
-    .card.third {
-        background: #2b2987;
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
+
+
+
+
 
     .spacer {
         min-width: 50vw;
@@ -428,102 +429,10 @@ a:active {
 }
 
 
-.main__content h1 {
-    font-size: 3rem;
-    font-weight: 900;
-}
 
-.main__content h2 {
-    padding-top: 2rem;
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    font-weight: 500;
-}
 
-.main__btn {
-    background-color: #ffcc00;
-    border: none;
-    color: #000;
-    padding: 18px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
 
-.main__btn:hover {
-    background: #ffdd00;
-}
 
-.main__img--container {
-    text-align: center;
-}
-
-.main__img {
-    width: 100%;
-    height: 100%;
-}
-
-/* Startseite mobile Version */
-
-@media screen and (max-width: 768px) {
-
-    .main__container {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        padding: unset;
-        padding: 0 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .main__content {
-        text-align: center;
-        margin-top: 5rem;
-    }
-
-    .main__img--container {
-        margin-top: 2rem;
-        margin-bottom: 5rem;
-    }
-
-    .main__content h1 {
-        font-size: 2.5rem;
-    }
-
-    .main__content h2 {
-        font-size: 2rem;
-    }
-
-    .main__content p {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
-
-    .main__btn {
-        font-size: 1.2rem;
-        background: #ffcc00;
-        color: #000;
-        width: 100%;
-        max-width: 400px;
-        border: none;
-        border-radius: 8px;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        cursor: pointer;
-        position: relative;
-        transition: all 0.3s;
-        outline: none;
-    }
-}
 
 
 
@@ -713,7 +622,6 @@ a:active {
 /* Mitglied werden Section */
 
 .mitglied_werden {
-
     background: linear-gradient(to bottom, #e66969, #9f1f1f);
     font-size: 1rem;
 }
