@@ -9,8 +9,7 @@
 
 :root{
     /*Hintergründe*/
-    --weiß: #f9f9f9;
-    --navbar: #f9f9f9;
+    --hintergrund: #f9f9f9;
     --navbar_trans: #f9f9f9e6;
 
     --startseite: #a4e2ff;
@@ -57,7 +56,7 @@ a:active {
 
 /* Content */
 body {
-    background: var(--weiß);
+    background: var(--hintergrund);
 }
 
 .content{
@@ -279,7 +278,7 @@ body {
 
     /* Blur effect wenn Menü aktiv ist */
     .navbar.is-active {
-        background: var(--navbar);
+        background: var(--hintergrund);
         backdrop-filter: unset;
     }
 }
@@ -303,7 +302,7 @@ body {
 .card {
     width: 90vw;
     max-width: 1300px;
-    background-color: var(--weiß);
+    background-color: var(--hintergrund);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1070,7 +1069,7 @@ td:first-child {
 /* Footer Section */
 
 .footer__container {
-    background: var(--text_sec);
+    background: var(--hintergrund);
     color: var(--text);
     padding-top: 4rem;
     padding-bottom: 2rem;
