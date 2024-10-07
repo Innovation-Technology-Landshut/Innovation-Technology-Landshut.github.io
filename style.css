@@ -368,16 +368,26 @@ body {
     display: none;
 }
 
-
-.tool-container {
+.scroll-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     margin: 0 auto;
+    z-index: 999;
+    max-width: 1300px;
+    padding: 0 2rem;
 }
 
-.tool-container button {
-    text-align: right;
+.scroll-button {
+    background-color: transparent;
+    color: var(--text);
+    font-size: 2rem;
+    border: 1px solid var(--text);
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    scale: 1;
 }
 
 
@@ -404,25 +414,6 @@ body {
 /* Aktiver Punkt */
 .dot.active {
     background-color: #333;
-}
-
-.scroll-button {
-    background-color: transparent;
-    color: var(--text);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    top: 88vh;
-    z-index: 999;
-    scale: 2;
-}
-
-.scroll-button.left {
-    left: 70%;
-}
-
-.scroll-button.right {
-    right: 20%;
 }
 
 .card__content h1 {
@@ -570,10 +561,11 @@ body {
         margin-bottom: 3rem;
     }
 
-    .scroll-btn {
+    .scroll-button {
         display: none;
     }
 }
+
 
 
 
