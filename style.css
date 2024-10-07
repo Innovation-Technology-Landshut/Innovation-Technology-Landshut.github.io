@@ -280,7 +280,7 @@ a:active {
 }
 
 .card.first {
-    background: #a4e2ff;
+    background: linear-gradient(to bottom, #a4e2ff 70%, #6cd0ff);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -291,8 +291,7 @@ a:active {
 }
 
 .card.second {
-    position: relative;
-    background: #e66969;
+    background: linear-gradient(to bottom, #e66969, #9f1f1f);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -302,8 +301,12 @@ a:active {
     padding: 0 50px;
 }
 
+.card.second p {
+    color: #fff;
+}
+
 .card.third {
-    background: #2b2987;
+    background: linear-gradient(to bottom, #18479e,#a4e2ff);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -311,6 +314,10 @@ a:active {
     height: 80vh;
     z-index: 1;
     padding: 0 50px;
+}
+
+.card.third h1 {
+    color: #fff;
 }
 
 .spacer {
@@ -422,13 +429,11 @@ a:active {
         padding: 2rem;
         display: grid;
         grid-template-columns: 1fr;
-        color: #fff;
         height: 75vh;
     }
 
 
     .card.third p {
-        color: #fff;
         font-size: 1.3rem;
     }
 

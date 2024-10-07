@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cardContainer.scrollLeft = scrollPosition;
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const cardContainer = document.getElementById('cardContainer');
     const cards = cardContainer.querySelectorAll('.card');
