@@ -144,11 +144,13 @@ a:active {
     border-radius: 8px;
     background: var(--button);
     color: var(--text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
     transition: all 0.3s ease;
     background: var(--button_hover);
+    scale: 1.02;
 }
 /* Mobile Version */
 @media screen and (max-width: 960px) {
@@ -325,12 +327,14 @@ a:active {
     margin-top: 2rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .main__btn:hover {
     background: var(--button_hover);
+    scale: 1.03;
 }
 
 .main__img--container {
@@ -490,12 +494,14 @@ a:active {
     margin-top: 4rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .überuns__btn:hover {
     background: var(--button_hover);
+    scale: 1.03;
 }
 
 /* Über Uns mobile Version */
@@ -631,12 +637,14 @@ a:active {
     margin-top: 4rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .mitglied_werden__btn:hover {
     background: var(--button_hover);
+    scale: 1.03;
 }
 
 .mitglied_werden__img--container {
@@ -875,11 +883,13 @@ td:first-child {
     font-size: 1.2rem;
     line-height: 1.25rem;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .paypal__btn:hover {
-    transition: 0.3s;
+    transition: all 0.3s ease;
     background: var(--button_hover);
+    scale: 1.03
 }
 
 @media screen and (max-width: 768px) {
