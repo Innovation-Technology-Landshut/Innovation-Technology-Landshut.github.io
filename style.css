@@ -348,54 +348,53 @@ a:active {
 @media screen and (max-width: 768px) {
     .card-container {
         display: flex;
-        gap: 2rem;
-        padding: 20px;
+        margin: 0;
+        padding: 0;
+        max-height: 1300px;
     }
 
     .card {
-        width: 90vw;
+        width: 95vw;
         max-width: 1300px;
         background-color: white;
-        padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         flex: 0 0 auto;
+        align-items: center;
+        justify-self: center;
         transition: transform 0.3s ease-in-out;
-        overflow: unset;
+        overflow: hidden;
+        min-height: 520px;
+        height: 80vh;
+        margin: 1rem;
+        z-index: 2;
+    }
+
+    .card img{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
     }
 
     .card.first {
         background: #a4e2ff;
         display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-self: center;
-        height: 80vh;
-        z-index: 1;
-        padding: 0 50px;
+        grid-template-columns:auto;
+        padding: 2rem;
     }
 
     .card.second {
-        position: relative;
         background: #e66969;
         display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-self: center;
-        height: 80vh;
-        z-index: 1;
-        padding: 0 50px;
+        grid-template-columns: auto;
+        padding: 2rem;
     }
 
     .card.third {
         background: #2b2987;
         display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
-        justify-self: center;
-        height: 80vh;
-        z-index: 1;
-        padding: 0 50px;
+        padding: 2rem;
     }
 
     .spacer {
@@ -426,7 +425,6 @@ a:active {
     .dot.active {
         background-color: #333;
     }
-    
 }
 
 
@@ -466,7 +464,7 @@ a:active {
     text-align: center;
 }
 
-#main__img {
+.main__img {
     width: 100%;
     height: 100%;
 }

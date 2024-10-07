@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             const cardWidth = cards[0].offsetWidth + 16;
-            const scrollPosition = index * cardWidth;
+            const scrollPosition = (index + 1) * cardWidth;
             cardContainer.scrollTo({
                 left: scrollPosition,
                 behavior: 'smooth'
