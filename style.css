@@ -9,6 +9,7 @@
 
 :root{
     /*Hintergründe*/
+    --weiß: #fff;
     --navbar: #fff;
     --navbar_trans: #ffffffe6;
 
@@ -298,7 +299,7 @@ a:active {
 .card {
     width: 90vw;
     max-width: 1300px;
-    background-color: white;
+    background-color: var(--weiß);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -324,7 +325,7 @@ a:active {
 }
 
 .card.second {
-    background: linear-gradient(to bottom, #e66969, #9f1f1f);
+    background: linear-gradient(to bottom, var(--mitgliedwerden), var(--mitgliedwerden_sec));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -335,11 +336,11 @@ a:active {
 }
 
 .card.second p {
-    color: #fff;
+    color: var(--text_sec);
 }
 
 .card.third {
-    background: linear-gradient(to bottom, #18479e,#a4e2ff);
+    background: linear-gradient(to bottom, var(--spendenseite),var(--spendenseite_sec));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -350,7 +351,7 @@ a:active {
 }
 
 .card.third h1 {
-    color: #fff;
+    color: (var(--text_sec));
 }
 
 .spacer {
@@ -390,7 +391,7 @@ a:active {
 }
 
 .card__content h2 {
-    color: #fff;
+    color: var(--text_sec);
     font-size: 2.5rem;
     font-weight: 400;
     padding-top: 2rem;
@@ -398,7 +399,7 @@ a:active {
 
 .card__text {
     padding-top: 2rem;
-    color: #000;
+    color: var(--text);
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -467,7 +468,6 @@ a:active {
         height: 75vh;
     }
 
-
     .card.third p {
         font-size: 1.3rem;
     }
@@ -520,35 +520,6 @@ a:active {
         border: none;
         border-radius: 8px;
         transition: all 0.3s;
-    }
-
-    .spacer {
-        min-width: 50vw;
-        flex-shrink: 0;
-    }
-
-    .card-container::-webkit-scrollbar {
-        width: 0;
-    }
-
-    .pagination {
-        display: flex;
-        justify-content: center;
-        margin: 1vh 0;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-        background-color: #bbb;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .dot.active {
-        background-color: #333;
     }
 }
 
