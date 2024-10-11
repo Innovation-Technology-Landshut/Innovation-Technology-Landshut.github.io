@@ -43,42 +43,93 @@
     </nav>
     <!-- Main Section -->
     <section class="content">
-        <section class="main">
-            <div class="main__container">
-                <div class="main__content">
-                    <h1 class="main__title">Innovation & Technology Landshut e.V.</h1>
-                    <h2 class="main__text">Bei uns ist<br>jeder eine Eins!</h2>
+        <!-- Scroll Buttons -->
+        <div class="scroll-buttons">
+            <button class="scroll-button left"><</button>
+            <button class="scroll-button right">></button>
+        </div>
+        <div class="card-container" id="cardContainer">
+            <div class="spacer"></div>
+            <div class="card first">
+                <div class="card__content">
+                    <h1 class="card__title">Innovation & Technology Landshut e.V.</h1>
+                    <h2 class="card__title">Bei uns ist jeder<br> eine Eins!</h2>
                     <!-- Button -->
-                    <a href="./ueber_uns.html" class="main__btn">Über Uns</a>
+                    <a href="./ueber_uns.html" class="card__btn">Über Uns</a>
                 </div>
-                <div class="main__img--container">
-                    <img src="./images/Team.svg" alt="pic" id="main__img">
+                <div class="card__img--container">
+                    <img src="./images/Team.svg" alt="pic" id="card__img">
+                </div>
+                <div class="card-background_1"></div>
+            </div>
+            <div class="card second">
+                <div class="card__content">
+                    <h1 class="card__title">Hol das Maximum aus deinem Studium heraus!</h1>
+                    <p class="card__text">Finde <strong>Gleichgesinnte</strong>,<br>knüpfe
+                        <strong>Kontakte</strong><br>und profitiere von<br>spannenden
+                        <strong>Veranstaltungen</strong>.
+                    </p>
+                    <a href="https://forms.gle/WeVo9oipj92hz5vAA" class="card__btn">Mitglied werden!</a>
+                </div>
+                <div class="card__img--container">
+                    <img src="./images/mitgliedwerden.svg" alt="pic" id="card__img">
+                </div>
+                <div class="card-background_2"></div>
+            </div>
+            <div class="card third">
+                <div class="card__content">
+                    <h1 class="card__title">Unterstütze den Verein!</h1>
+                    <p class="card__text">
+                        Deine Spende ermöglicht es uns, <strong>Veranstaltungen zu organisieren</strong>, Workshops
+                        anzubieten und die <strong>Infrastruktur des Vereins zu verbessern</strong>.
+                    </p>
+                    <form action="https://www.paypal.com/ncp/payment/PCHDNPDLESELQ" method="post" target="_top"
+                        style="display: grid;justify-items: left;align-content:center;text-align: center; gap:0.5rem;">
+                        <input class="card__btn" type="submit" value="Jetzt Spenden" />
+                        <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                        <section> Abgewickelt durch <img
+                                src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg"
+                                alt="paypal" style="height:0.875rem;vertical-align:middle;" />
+                        </section>
+                    </form>
+                </div>
+                <div class="card__img--container">
+                    <img src="./images/support.svg" alt="Spende" id="card__img">
+                </div>
+                <div class="card-background_3"></div>
+            </div>
+            <div class="spacer"></div>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <div class="footer__link--wrapper">
+                    <div class="footer__link--items">
+                        <h2 class="footer__title">Links</h2>
+                        <a href="./instagram.html">Instagram</a>
+                        <a href="./impressum.html">Impressum</a>
+                    </div>
+                </div>
+                <div class="footer__link--wrapper">
+                    <div class="footer__text">
+                        <h2 class="footer__title">Kontakt</h2>
+                        <a>Innovation & Technology<br>Landshut e.V.</a>
+                        <a>Am Lurzenhof 1</a>
+                        <a>84036 Landshut</a>
+                        <a>info@it-la.info</a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Footer Section -->
-        <section class="footer">
-            <div class="footer__container">
-                <div class="footer__links">
-                    <div class="footer__link--wrapper">
-                        <div class="footer__link--items">
-                            <h2 class="footer__title">Links</h2>
-                            <a href="./instagram.html">Instagram</a>
-                            <a href="./impressum.html">Impressum</a>
-                        </div>
-                    </div>
-                    <div class="footer__link--wrapper">
-                        <div class="footer__text">
-                            <h2 class="footer__title">Kontakt</h2>
-                            <a>Innovation & Technology<br>Landshut e.V.</a>
-                            <a>Am Lurzenhof 1</a>
-                            <a>84036 Landshut</a>
-                            <a>info@it-la.info</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
     </section>
     <script src="app.js"></script>
 </body>

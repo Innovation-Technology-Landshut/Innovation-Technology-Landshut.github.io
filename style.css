@@ -9,8 +9,8 @@
 
 :root{
     /*Hintergründe*/
-    --navbar: #fff;
-    --navbar_trans: #ffffffe6;
+    --hintergrund: #f9f9f9;
+    --navbar_trans: #f9f9f9e6;
 
     --startseite: #a4e2ff;
     --startseite_sec: #6cd0ff;
@@ -55,6 +55,10 @@ a:active {
 
 
 /* Content */
+body {
+    background: var(--hintergrund);
+}
+
 .content{
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -211,7 +215,7 @@ a:active {
         top: 55px;
         width: 100%;
         height: auto;
-        background-color: var(--text_sec);
+        background-color: var(--hintergrund);
         font-size: 1.2rem;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
@@ -274,7 +278,7 @@ a:active {
 
     /* Blur effect wenn Menü aktiv ist */
     .navbar.is-active {
-        background: var(--navbar);
+        background: var(--hintergrund);
         backdrop-filter: unset;
     }
 }
@@ -285,37 +289,162 @@ a:active {
 
 /* Startseite Section */
 
-.main {
-    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
-    font-size: 1.5rem;
+.card-container {
+    display: flex;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    gap: 1rem;
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Snap in der horizontalen Richtung aktivieren */
+    scrollbar-width: thin; /* Für Firefox */
+    scroll-behavior: smooth; /* Weiches Scrollen */
+    -ms-overflow-style: none; /* Für IE und Edge */
+    scrollbar-width: none; /* Für Firefox */
 }
 
-.main__container {
+.card {
+    width: 90vw;
+    max-width: 1300px;
+    background-color: var(--hintergrund);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: center; /* Jede Karte wird zentriert beim Snapping */
+    overflow: scroll;
+}
+
+.card:hover {
+    transform: scale(1.01); /* Vergrößern der Karte beim Hover */
+}
+
+.card.first {
+    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
-    margin: 0 auto;
-    min-height: 90vh;
+    height: 75vh;
     z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
-.main__content h1 {
+.card.second {
+    background: linear-gradient(to bottom, var(--mitgliedwerden), var(--mitgliedwerden_sec));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    height: 75vh;
+    z-index: 1;
+    padding: 20px 50px;
+}
+
+.card.second p {
+    color: var(--text_sec);
+}
+
+.card.third {
+    background: linear-gradient(to bottom, var(--spendenseite),var(--spendenseite_sec));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    height: 75vh;
+    z-index: 1;
+    padding: 20px 50px;
+}
+
+.card.first h1, .card.second h1, .card.third p, .card__btn { /* Textshadow für bessere Lesbarkeit */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.card.third h1 {
+    color: var(--text_sec);
+}
+
+.spacer {
+    min-width: 50vw; /* Platz entspricht 50% der Bildschirmbreite */
+    flex-shrink: 0; /* Verhindert Schrumpfen */
+}
+
+.card-container::-webkit-scrollbar { /* Scrollbar entfernen */
+    display: none;
+}
+
+.scroll-buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 999;
+    max-width: 1300px;
+    padding: 0 2rem;
+}
+
+.scroll-button {
+    background-color: transparent;
+    color: var(--text);
+    font-size: 2rem;
+    border: 1px solid var(--text);
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    scale: 1;
+}
+
+.card-background_1, .card-background_2, .card-background_3 {
+    display: none;
+}
+
+
+
+
+
+/* Punkt-Navigation */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Aktiver Punkt */
+.dot.active {
+    background-color: #333;
+}
+
+.card__content h1 {
     font-size: 3rem;
     font-weight: 900;
 }
 
-.main__content h2 {
-    padding-top: 2rem;
+.card__content h2 {
     color: var(--text_sec);
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    padding-top: 2rem;
 }
 
-.main__btn {
+.card__text {
+    padding-top: 2rem;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.card__btn {
     background-color: var(--button);
     border: none;
     color: var(--text);
@@ -324,7 +453,7 @@ a:active {
     text-decoration: none;
     display: inline-block;
     font-size: 1.4rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -332,16 +461,17 @@ a:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.main__btn:hover {
+
+.card__btn:hover {
     background: var(--button_hover);
     scale: 1.03;
 }
 
-.main__img--container {
+.card__img--container {
     text-align: center;
 }
 
-#main__img {
+#card__img {
     width: 100%;
     height: 100%;
 }
@@ -349,59 +479,159 @@ a:active {
 /* Startseite mobile Version */
 
 @media screen and (max-width: 768px) {
+    .card {
+        padding: 0;
+        margin: 0;
+        width: 95vw;;
+        position: relative;
+        overflow: scroll;
+        z-index: 1;
+    }
 
-    .main__container {
+    .card.first{
+        margin: 0;
+        padding: 2rem;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
+        height: 75vh;
+    }
+
+    .card.first img{
+        display: none
+    }
+
+    .card.second {
+        margin: 0;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 75vh;
+    }
+
+    .card.third {
+        margin: 0;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 75vh;
+    }
+
+    .card.third p {
+        font-size: 1.3rem;
+    }
+
+    .card.first img{
+        display: none
+    }
+
+    .card.second img{
+        display: none;
+    }
+
+    #card__img {
+        display: none;
+    }
+
+    .card-background_1{
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/Team.svg'); /* Pfad zu deinem Bild */
+        background-size: 140%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
+    .card-background_2{
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/mitgliedwerden.svg'); /* Pfad zu deinem Bild */
+        background-size: 100%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
+    .card-background_3{
+        display: unset;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/support.svg'); /* Pfad zu deinem Bild */
+        background-size: 100%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
+    .card__content {
+        padding: 2rem 0;
         align-items: center;
         justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        padding: unset;
-        padding: 0 2rem;
-        padding-bottom: 2rem;
+        z-index: 2;
     }
 
-    .main__content {
-        text-align: center;
-        margin-top: 5rem;
-    }
-
-    .main__img--container {
-        margin-top: 2rem;
-        margin-bottom: 5rem;
-    }
-
-    .main__content h1 {
-        font-size: 2.5rem;
-    }
-
-    .main__content h2 {
+    .card__content h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+        padding: 0;
         font-size: 2rem;
     }
 
-    .main__content p {
-        margin-top: 1rem;
+    .card__content h2 {
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0;
+        font-size: 1.8rem;
+    }
+
+    .card__content p {
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0;
         font-size: 1.5rem;
     }
 
-    .main__btn {
+    .card__btn {
+        margin: 0;
+        margin-bottom: 1rem;
         font-size: 1.2rem;
-        background: var(--button);
-        color: var(--text);
         width: 100%;
-        max-width: 400px;
+        max-width: 330px;
         border: none;
         border-radius: 8px;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-        cursor: pointer;
-        position: relative;
         transition: all 0.3s;
-        outline: none;
+    }
+
+    .card-container::-webkit-scrollbar { /* Scrollbar entfernen */
+        display: none;
+    }
+
+    .pagination {
+        margin-bottom: 3rem;
+    }
+
+    .scroll-button {
+        display: none;
     }
 }
-
 
 
 
@@ -592,7 +822,6 @@ a:active {
 /* Mitglied werden Section */
 
 .mitglied_werden {
-
     background: linear-gradient(to bottom, var(--mitgliedwerden), var(--mitgliedwerden_sec));
     font-size: 1rem;
 }
@@ -948,7 +1177,7 @@ td:first-child {
 /* Footer Section */
 
 .footer__container {
-    background: var(--text_sec);
+    background: var(--hintergrund);
     color: var(--text);
     padding-top: 4rem;
     padding-bottom: 2rem;
