@@ -308,10 +308,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     flex: 0 0 auto;
     transition: transform 0.3s ease-in-out;
     scroll-snap-align: center; /* Jede Karte wird zentriert beim Snapping */
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .card:hover {
@@ -326,7 +327,7 @@ body {
     justify-self: center;
     height: 75vh;
     z-index: 1;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
 .card.second {
@@ -337,7 +338,7 @@ body {
     justify-self: center;
     height: 75vh;
     z-index: 1;
-    padding: 0 50px;
+    padding: 20px 50px;
 }
 
 .card.second p {
@@ -352,7 +353,11 @@ body {
     justify-self: center;
     height: 75vh;
     z-index: 1;
-    padding: 0 50px;
+    padding: 20px 50px;
+}
+
+.card.first h1, .card.second h1, .card.third p, .card__btn { /* Textshadow für bessere Lesbarkeit */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .card.third h1 {
@@ -388,6 +393,10 @@ body {
     padding: 0.5rem;
     cursor: pointer;
     scale: 1;
+}
+
+.card-background_1, .card-background_2, .card-background_3 {
+    display: none;
 }
 
 
@@ -472,7 +481,10 @@ body {
     .card {
         padding: 0;
         margin: 0;
-        width: 95vw;
+        width: 95vw;;
+        position: relative;
+        overflow: scroll;
+        z-index: 1;
     }
 
     .card.first{
@@ -481,6 +493,10 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         height: 75vh;
+    }
+
+    .card.first img{
+        display: none
     }
 
     .card.second {
@@ -504,7 +520,7 @@ body {
     }
 
     .card.first img{
-        display: none;
+        display: none
     }
 
     .card.second img{
@@ -515,10 +531,60 @@ body {
         display: none;
     }
 
+    .card-background_1{
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/Team.svg'); /* Pfad zu deinem Bild */
+        background-size: 140%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
+    .card-background_2{
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/mitgliedwerden.svg'); /* Pfad zu deinem Bild */
+        background-size: 100%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
+    .card-background_3{
+        display: unset;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem 0;
+        background-image: url('./images/support.svg'); /* Pfad zu deinem Bild */
+        background-size: 100%; /* Vergrößert das Bild */
+        background-position:bottom;
+        background-repeat: no-repeat;
+        filter: grayscale(80%) opacity(0.3); /* Grau machen und Transparenz reduzieren */
+        z-index: -1;
+    }
+
     .card__content {
         padding: 2rem 0;
         align-items: center;
         justify-self: center;
+        z-index: 2;
     }
 
     .card__content h1 {
