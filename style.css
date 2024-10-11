@@ -461,6 +461,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
 .card__btn:hover {
     background: var(--button_hover);
     scale: 1.03;
