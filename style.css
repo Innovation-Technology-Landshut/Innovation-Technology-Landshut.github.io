@@ -37,7 +37,6 @@
     --links_hover: #ffb300;
 }
 
-
 input,
 textarea,
 button,
@@ -1252,5 +1251,104 @@ td:first-child {
 
     .footer__text {
         white-space: unset;
+    }
+}
+
+
+
+
+/* Darkmode */
+@media (prefers-color-scheme: dark){
+    body {
+        background: var(--hintergrund);
+        color: var(--text);
+    }
+
+    .navbar__logo img {
+        filter: invert(1);
+    }
+
+    :root {
+        /* Hintergründe */
+        --hintergrund: #080808;
+        --navbar_trans: #080808e6; 
+    
+        --startseite: #BB86FC;
+        --startseite_sec: #9641ff; 
+    
+        --überuns: #080808;
+    
+        --mitgliedwerden: #780040;
+        --mitgliedwerden_sec: #c6006a; 
+    
+        --spendenseite: #32012F; 
+        --spendenseite_sec: #790171; 
+    
+        /* Schriftfarben */
+        --text: #fff; 
+        --text_sec: #000; 
+    
+        /*Buttons*/
+        --button: #ffcc00;
+
+        /*Hover*/
+        /*Buttons*/
+        --button_hover: #ffdd00;
+        /*Links*/
+        --links_hover: #ffb300;
+    }
+
+    .überuns.right, .überuns.bottom {
+        background: linear-gradient(to bottom, var(--spendenseite), var(--spendenseite_sec));
+    }
+
+    .überuns__btn {
+        color: var(--text_sec);
+    }
+
+    .button {
+        color: var(--text_sec);
+    }
+
+    .card {
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    }
+
+    .card.first h1, .card.second h1, .card.third p, .card__btn { 
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .card.third h1 {
+        color: var(--text);
+    }
+
+    .card__btn {
+        color: var(--text_sec);
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    }
+
+    .dot {
+        background-color: #333;
+    }
+    
+    /* Aktiver Punkt */
+    .dot.active {
+        background-color: #bbb;
+    }
+
+    .mitglied_werden__btn{
+        color: var(--text_sec);
+    }
+    
+    .mitgliedsbeiträge__content, .mitgliedsbeiträge__content h3 {
+        color: #101010;
+    }
+
+    .paypal__btn {
+        color: var(--text_sec)
+    }
+
+    .impressum__content {
+        color: var(--text);
     }
 }
