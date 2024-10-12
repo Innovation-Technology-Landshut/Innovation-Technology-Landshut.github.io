@@ -311,7 +311,7 @@ body {
     flex: 0 0 auto;
     transition: transform 0.3s ease-in-out;
     scroll-snap-align: center; /* Jede Karte wird zentriert beim Snapping */
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .card:hover {
