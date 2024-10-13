@@ -330,7 +330,7 @@ body {
 }
 
 .card.second {
-    background: linear-gradient(to bottom, var(--mitgliedwerden), var(--mitgliedwerden_sec));
+    background: linear-gradient(to bottom, var(--mitgliedwerden) 70%, var(--mitgliedwerden_sec));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -345,7 +345,7 @@ body {
 }
 
 .card.third {
-    background: linear-gradient(to bottom, var(--spendenseite),var(--spendenseite_sec));
+    background: linear-gradient(to bottom, var(--spendenseite) 70%,var(--spendenseite_sec));
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1278,11 +1278,11 @@ td:first-child {
     
         --überuns: #080808;
     
-        --mitgliedwerden: #780040;
-        --mitgliedwerden_sec: #c6006a; 
-    
-        --spendenseite: #32012F; 
-        --spendenseite_sec: #790171; 
+        --mitgliedwerden: #86ddff;
+        --mitgliedwerden_sec: 	#40afdb; 
+
+        --spendenseite: #ffa768; 
+        --spendenseite_sec: #e2772a;
     
         /* Schriftfarben */
         --text: #fff; 
@@ -1299,7 +1299,8 @@ td:first-child {
     }
 
     .überuns.right, .überuns.bottom {
-        background: linear-gradient(to bottom, var(--spendenseite), var(--spendenseite_sec));
+        background: linear-gradient(to bottom, var(--startseite), var(--startseite_sec));
+        color: var(--text_sec)
     }
 
     .überuns__btn {
@@ -1310,11 +1311,11 @@ td:first-child {
         color: var(--text_sec);
     }
 
-    .card {
+    .card, .card.third p {
         text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
     }
 
-    .card.first h1, .card.second h1, .card.third p, .card__btn { 
+    .card.first h1, .card.second h1, .card.third h1, .card__btn { 
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
@@ -1340,7 +1341,7 @@ td:first-child {
         color: var(--text_sec);
     }
     
-    .mitgliedsbeiträge__content, .mitgliedsbeiträge__content h3 {
+    .mitgliedsbeiträge__content, .mitgliedsbeiträge__content h3, .card.third p {
         color: #101010;
     }
 
