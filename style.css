@@ -1278,11 +1278,11 @@ td:first-child {
     
         --überuns: #080808;
     
-        --mitgliedwerden: #ff689d;
-        --mitgliedwerden_sec: 	#c22b60; 
+        --mitgliedwerden: #8e86fc;
+        --mitgliedwerden_sec: 	#4b43c8; 
 
-        --spendenseite: #ff6868; 
-        --spendenseite_sec: #c92929;
+        --spendenseite: #86c3fc; 
+        --spendenseite_sec: #367bbc;
     
         /* Schriftfarben */
         --text: #fff; 
