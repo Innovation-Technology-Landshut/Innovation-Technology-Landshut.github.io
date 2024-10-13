@@ -1355,8 +1355,13 @@ td:first-child {
         text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
     }
     
-    .mitglied_werden h1, .mitgliedsbeiträge__content h3{
+    .mitglied_werden h1{
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .mitgliedsbeiträge__content h3 {
+        color: var(--text_sec);
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
     }
 
     .mitglied_werden__text, .mitgliedsbeiträge__content {
