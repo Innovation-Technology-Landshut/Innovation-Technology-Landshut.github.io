@@ -363,6 +363,11 @@ body {
     color: var(--text_sec);
 }
 
+.card.third p {
+    color: var(--text_sec);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
 .spacer {
     min-width: 50vw; /* Platz entspricht 50% der Bildschirmbreite */
     flex-shrink: 0; /* Verhindert Schrumpfen */
