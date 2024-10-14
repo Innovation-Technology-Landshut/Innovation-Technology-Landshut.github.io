@@ -1063,7 +1063,7 @@ td:first-child {
 }
 
 .spendenseite__content {
-    color: var(--text);
+    color: var(--text_sec);
     font-size: 1.5rem;
     font-weight: 300;
     margin: 2rem 0;
