@@ -72,7 +72,7 @@ body {
 /* Navbar */
 .navbar {
     background: var(--navbar_trans);
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1176,6 +1176,74 @@ td:first-child {
 }
 
 
+.kontakt {
+    background: linear-gradient(var(--mitgliedwerden) 70%, var(--mitgliedwerden_sec));
+}
+
+.kontakt__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    z-index: 1;
+    min-height: 90vh;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.kontakt__content {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow:0 2px 4px rgba(255, 255, 255, 0.2)
+}
+
+.kontakt__content h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.kontakt__content a{
+    color: var(--text);
+}
+
+.kontakt__img--container {
+    text-align: center;
+}
+
+#kontakt__img {
+    width: 100%;
+    height: 100%;
+}   
+
+
+@media screen and (max-width: 768px) {
+    .kontakt__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 15px;
+    }
+
+    .kontakt__content {
+        text-align: left;
+        margin: 2rem 0;
+    }
+    .kontakt__img--container{
+        margin-bottom: 3rem;
+        padding: 1rem;
+    }
+}
+
+
+
 
 
 /* Footer Section */
@@ -1380,5 +1448,9 @@ td:first-child {
 
     .impressum__content {
         color: var(--text);
+    }
+
+    .kontakt__content {
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     }
 }
