@@ -1210,7 +1210,7 @@ td:first-child {
     color: var(--text);
 }
 
-.kontakt__image--container {
+.kontakt__img--container {
     text-align: center;
 }
 
@@ -1236,9 +1236,9 @@ td:first-child {
         text-align: left;
         margin: 2rem 0;
     }
-    .kontakt__image--container{
-        margin: 3rem;
-        margin-bottom: 10rem;
+    .kontakt__img--container{
+        margin-bottom: 3rem;
+        padding: 1rem;
     }
 }
 
