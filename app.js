@@ -10,6 +10,10 @@ menu.addEventListener('click', function(){
     content.classList.toggle('blur');
 })
 
+
+
+
+
 const observerright = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
@@ -32,11 +36,15 @@ const observerleft = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenElementsright = document.querySelectorAll('.überuns__hidden.right');
+const hiddenElementsright = document.querySelectorAll('.überuns__card');
 hiddenElementsright.forEach((element) => observerright.observe(element));
 
-const hiddenElementsleft = document.querySelectorAll('.überuns__hidden.left');
-hiddenElementsleft.forEach((element) => observerleft.observe(element));
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const cardContainer = document.getElementById('cardContainer');

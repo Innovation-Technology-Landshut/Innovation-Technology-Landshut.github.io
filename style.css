@@ -677,32 +677,42 @@ body {
 /* Über Uns Section */
 
 .überuns {
-    background: var(--überuns);
+    background: var(--hintergrund);
     font-size: 1rem;
+    margin-top: 4rem;
 }
 
-.überuns.right,.überuns.bottom {
+.überuns__card {
+    display: flex;
+    background: var(--überuns);
+    height: 50vh;
+    width: 90vw;
+    max-width: 1300px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+    transform: translateY(200px);
+}
+
+.überuns__card.right,.überuns__card.bottom {
     background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
 }
 
-.überuns__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 3rem 50px;
+/* Über Uns animation */
+.überuns__visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 .überuns__content {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin: 0 auto;
-    padding: 4rem 0;
-    min-height: 60vh;
-    max-width: 1300px;
+    justify-content: center;
+    height: 100%;
 }
 
 .überuns__content.left {
@@ -711,13 +721,11 @@ body {
 
 .überuns__content.right {
     flex-direction: row-reverse;
-    margin: 0 auto;
-    padding: 4rem 50px;
 }
 
 .überuns__text--container {
     flex: 1;
-    padding: 2rem;
+    padding: 0 4rem;
     font-size: 1.4rem;
     font-weight: 500;
 
@@ -769,9 +777,6 @@ body {
 
 /* Über Uns mobile Version */
 @media screen and (max-width: 768px) {
-    .überuns__container {
-        padding: 2rem 10px;
-    }
 
     .überuns_content {
         flex-direction: column;
@@ -832,21 +837,6 @@ body {
         outline: none;
     }
 }
-
-/* Über Uns animation */
-.überuns__hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
-    transform: translateY(100px);
-}
-
-.überuns__visible {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-}
-
 
 
 
@@ -1390,7 +1380,7 @@ td:first-child {
         --startseite: #BB86FC;
         --startseite_sec: #9641ff;
 
-        --überuns: #101010;
+        --überuns: #cf386d;
 
         --mitgliedwerden: #8e86fc;
         --mitgliedwerden_sec: #4b43c8;
