@@ -681,11 +681,7 @@ body {
     font-size: 1rem;
 }
 
-.überuns.right {
-    background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
-}
-
-.überuns.bottom {
+.überuns.right,.überuns.bottom {
     background: linear-gradient(to bottom, var(--startseite) 70%, var(--startseite_sec));
 }
 
@@ -1394,7 +1390,7 @@ td:first-child {
         --startseite: #BB86FC;
         --startseite_sec: #9641ff;
 
-        --überuns: #080808;
+        --überuns: #101010;
 
         --mitgliedwerden: #8e86fc;
         --mitgliedwerden_sec: #4b43c8;
@@ -1421,7 +1417,6 @@ td:first-child {
 
     .überuns.right,
     .überuns.bottom {
-        background: linear-gradient(to bottom, var(--startseite), var(--startseite_sec));
         color: var(--text_sec)
     }
 
