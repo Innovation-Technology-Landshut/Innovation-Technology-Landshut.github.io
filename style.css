@@ -236,7 +236,7 @@ body {
     /* Navbar Toggle (Striche) Position */
     #mobile-menu {
         position: absolute;
-        top: 20%;
+        top: 13%;
         right: 5%;
         transform: translate(-5%, 20%);
     }
@@ -1388,8 +1388,8 @@ td:first-child {
 
     :root {
         /* Hintergründe */
-        --hintergrund: #090909;
-        --navbar_trans: #090909e6;
+        --hintergrund: #101010;
+        --navbar_trans: #101010e6;
 
         --startseite: #BB86FC;
         --startseite_sec: #9641ff;
